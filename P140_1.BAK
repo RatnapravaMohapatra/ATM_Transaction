@@ -1,0 +1,13 @@
+/* 5.6 -> Assuming x=10, State whether the logical expression are true or
+	 false */
+
+ # include<stdio.h>
+ # include<conio.h>
+ void main()
+ {
+     int x=10,p;
+     clrscr();
+     p=(x==10 && x>10 && !x);
+     printf("%d",p);
+     getch();
+ }
