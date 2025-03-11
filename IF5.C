@@ -1,0 +1,39 @@
+/*  Logical Operator -   There are three types of logical operators and
+   those are
+  a) AND (&&) -> Logical && operator is specially used where there will be
+     --------    more than one condition and the execution will arise
+		 if all the conditions within the given condition are
+		 true.
+  Q. Input the length of three sides of a triangle and display whether the
+     triangle is possible or not. If possible then display what type of
+     triangle it is           */
+
+
+   # include<stdio.h>
+   # include<conio.h>
+   # include<math.h>
+   void main()
+   {
+	int a,b,c,f=0;
+	clrscr();
+	printf("Enter length of three sides of a triangle : ");
+	scanf("%d %d %d",&a,&b,&c);
+	if((a+b)>c)
+	     if((b+c)>a)
+		 if((a+c)>b)
+		 {
+		     f=1;
+		     printf("\n Triagnle is possible ");
+		     if(a==b && b==c)
+			 printf("\n It is an equilateral triangle ");
+		     if(a!=b && b!=c && a!=c)
+			  printf("\n It is a scelene triangle");
+		     if((a==b && a!=c) || (b==c && b!=a) || (a==c && a!=b))
+			printf("\n It is a Isoscale triangle");
+
+		 }
+
+	if(f==0)
+	    printf("\n Triangle is not possible ");
+	getch();
+   }
